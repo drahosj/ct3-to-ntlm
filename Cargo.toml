@@ -1,0 +1,18 @@
+[package]
+name = "ct3-to-ntlm"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "3.1.2"
+hex = "0.4.3"
+bitvec = "1.0.0"
+md5 = "0.7.0"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"
