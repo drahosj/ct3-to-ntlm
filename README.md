@@ -16,6 +16,7 @@ cd ct3-to-ntlm
 cargo build --release
 mv target/release/ct3-to-ntlm $anywhere-in-you-PATH
 ```
+Requires rust 1.59 (thanks to the strip feature in the Cargo.toml file, but you can remove it if necessary).
 
 ## What it does
 Use Responder.py and get some NetNTLMv1 hashes :
