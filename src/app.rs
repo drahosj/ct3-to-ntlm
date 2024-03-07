@@ -24,7 +24,7 @@ pub fn ct3_to_ntlm(ct3: &[u8], client_challenge: &[u8], lm_response: Option<&[u8
             odd_parity(k, &mut parited_key);
             des::decrypt(ct3, &parited_key, &mut decrypted_data);
             if decrypted_data == challenge {
-                return Some(format!("{i:x}{j:x}"));
+                return Some(format!("{i:02x}{j:02x}"));
             }
         }
     }
